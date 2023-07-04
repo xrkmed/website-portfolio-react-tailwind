@@ -4,7 +4,6 @@ import SocialMedias from './sections/SocialMedias';
 import Courses from './sections/Courses';
 import { FaAngleDoubleDown } from 'react-icons/fa'
 
-
 export default function App() {
   return (
     <>
@@ -28,6 +27,11 @@ export default function App() {
         <h1 className='text-5xl font-semibold md:text-6xl md:font-extralight antialiased'>
           CERTIFICAÇOES
         </h1>
+        <div className='block md:hidden mt-2'>
+          <p className='flex justify-center text-xl'>Arraste para o lado para ver mais</p>
+        </div>
+        {
+        }
         <Courses/>
         {/* <h1 className='text-6xl font-extralight mt-24 antialiased'>
           PROJETOS
@@ -36,8 +40,8 @@ export default function App() {
       </div>
     </div>
       <div className='flex flex-col text-center justify-center antialiased'>
-        <h1 className='text-center text-gray-100 font-semibold text-xl'>particular.guilherme.martins@gmail.com</h1>
-        <h2>
+        <h1 className='text-center text-gray-100 font-semibold md:text-xl text-lg'>particular.guilherme.martins@gmail.com</h1>
+        <h2 className='text-lg'>
           Desenvolvido em React.JS, Vite, PostCSS e TailwindCSS.
         </h2>
       </div>
