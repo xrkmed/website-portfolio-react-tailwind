@@ -2,9 +2,31 @@ import MyInfos from './sections/MyInfos';
 import AboutMe from './sections/AboutMe';
 import SocialMedias from './sections/SocialMedias';
 import Courses from './sections/Courses';
-import { FaAngleDoubleDown } from 'react-icons/fa'
+import { FaAngleDoubleDown, FaGraduationCap } from 'react-icons/fa'
+import { useEffect, useState } from 'react';
 
 export default function App() {
+  useEffect(() => {
+    const animatedArrow = document.getElementById('animatedArrow');
+    animatedArrow.addEventListener('click', () => {
+      window.scrollTo({
+        top: document.getElementById('certifications').offsetTop,
+        behavior: 'smooth'
+      })
+    })
+   }, []);
+
+   const [scrollLeft, setScrollLeft] = useState(0);
+   useEffect(() => {
+    document.getElementById('coursesList').addEventListener('scroll', () => {
+      const scrollPosition = document.getElementById('coursesList').scrollLeft;
+      const maxScroll = document.getElementById('coursesList').scrollWidth - document.getElementById('coursesList').clientWidth;
+
+      const progress = (scrollPosition / maxScroll) * 100;
+      setScrollLeft(progress);
+    });
+   }, []);
+
   return (
     <>
     <div className="mx-auto flex flex-col items-center justify-center h-screen">
@@ -18,25 +40,34 @@ export default function App() {
           </div>
         </div>
 
-        <div id="animatedArrow" className='text-6xl mt-12 animate-bounce'>
+        <div id="animatedArrow" className='text-6xl mt-12 animate-bounce cursor-pointer hover:text-gray-400 transition-colors'>
             <FaAngleDoubleDown/>
         </div>
     </div>
     <div className='pt-10 mt-8 block'>
       <div className='py-10 text-center'>
-        <h1 className='text-5xl font-semibold md:text-6xl md:font-extralight antialiased'>
-          CERTIFICAÇOES
+        <section id='certifications'>
+        <h1 className='text-4xl font-semibold md:text-6xl md:font-extralight antialiased flex justify-center gap-4'>
+          <FaGraduationCap/>CERTIFICAÇOES
         </h1>
         <div className='block md:hidden mt-2'>
-          <p className='flex justify-center text-xl'>Arraste para o lado para ver mais</p>
+          {
+            scrollLeft == 0 ?
+            (<> 
+              <h3>Arraste para o lado para ver mais</h3>
+            </>) :
+            <>
+            <div className='m-auto w-11/12 mt-4'>
+              <div className='h-1 bg-gray-900 rounded-full'>
+                <div className='h-full bg-slate-200 rounded-full' style={{width: `${scrollLeft}%`}}></div>
+              </div>
+            </div>
+            </>
+          }
+
         </div>
-        {
-        }
-        <Courses/>
-        {/* <h1 className='text-6xl font-extralight mt-24 antialiased'>
-          PROJETOS
-        </h1>
-        <Projects/> */}
+            <Courses/>
+        </section>
       </div>
     </div>
       <div className='flex flex-col text-center justify-center antialiased'>
