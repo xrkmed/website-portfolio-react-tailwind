@@ -11,7 +11,7 @@ export default function App() {
     const animatedArrow = document.getElementById('animatedArrow');
     animatedArrow.addEventListener('click', () => {
       window.scrollTo({
-        top: document.getElementById('certifications').offsetTop,
+        top: document.getElementById('projects').offsetTop,
         behavior: 'smooth'
       })
     })
@@ -47,7 +47,7 @@ export default function App() {
     </div>
     <div className='pt-10 mt-8 block'>
       <div className='py-10 text-center'>
-        <section id='certifications'>
+        <section id='projects'>
         <h1 className='text-4xl font-semibold md:text-6xl md:font-extralight antialiased flex justify-center gap-4'>
           <FaGraduationCap/>PROJETOS
         </h1>
