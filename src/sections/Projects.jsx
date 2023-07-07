@@ -73,9 +73,9 @@ export default function Projects(){
                 </div>
             : projects.length > 0 && (<>
             {projects}
-            <div className="flex flex-row gap-2 text-zinc-200">
-            <FaGithubSquare className="text-4xl "/>
-            <h1 className='text-2xl font-normal antialiased'>Mais projetos em <a href="https://www.github.com/xrkmed" target="_blank" rel="noreferrer" className="text-blue-500">github.com/xrkmed</a>.</h1>
+            <div className="flex flex-col md:flex-row gap-2 text-zinc-200 justify-center items-center text-center w-10/12">
+            <FaGithubSquare className="text-6xl md:text-4xl"/>
+            <h1 className='text-2xl'>Mais projetos em <a href="https://www.github.com/xrkmed" target="_blank" rel="noreferrer" className="text-blue-500">github.com/xrkmed</a>.</h1>
             </div>
             </>)
             || <h1 className='text-2xl font-light'>Nenhum projeto foi adicionado aqui ainda.</h1>
