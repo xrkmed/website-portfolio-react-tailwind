@@ -13,3 +13,8 @@ body{
     @apply bg-gray-900;
     @apply text-slate-100
 }
+
+strong{
+    @apply text-slate-300;
+    @apply font-bold;
+}

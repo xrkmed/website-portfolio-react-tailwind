@@ -53,7 +53,7 @@ function addFinishedCourse(course){
           <div className='py-6'>
             <img src={course.image} className='w-32 h-auto mx-auto rounded-lg mb-4' alt={course.name}/>
             <h1 className="text-2xl font-semibold">{course.name}</h1>
-            <h2 className='text-[#94a3b8]'>{course.description}</h2>
+            <h2 className='text-[#94a3b8]' dangerouslySetInnerHTML={{__html: course.description}}></h2>
           </div>
           <small className='text-gray-500 font-semibold italic'>LINGUAGENS E FERRAMENTAS APROFUNDADAS</small>
           <div className='py-2 flex flex-row gap-2 flex-wrap justify-center'>

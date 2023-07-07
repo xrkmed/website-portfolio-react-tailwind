@@ -2,6 +2,7 @@ import MyInfos from './sections/MyInfos';
 import AboutMe from './sections/AboutMe';
 import SocialMedias from './sections/SocialMedias';
 import Courses from './sections/Courses';
+import Projects from './sections/Projects';
 import { FaAngleDoubleDown, FaGraduationCap } from 'react-icons/fa'
 import { useEffect, useState } from 'react';
 
@@ -43,6 +44,16 @@ export default function App() {
         <div id="animatedArrow" className='text-6xl mt-12 animate-bounce cursor-pointer hover:text-gray-400 transition-colors'>
             <FaAngleDoubleDown/>
         </div>
+    </div>
+    <div className='pt-10 mt-8 block'>
+      <div className='py-10 text-center'>
+        <section id='certifications'>
+        <h1 className='text-4xl font-semibold md:text-6xl md:font-extralight antialiased flex justify-center gap-4'>
+          <FaGraduationCap/>PROJETOS
+        </h1>
+            <Projects/>
+        </section>
+      </div>
     </div>
     <div className='pt-10 mt-8 block'>
       <div className='py-10 text-center'>
