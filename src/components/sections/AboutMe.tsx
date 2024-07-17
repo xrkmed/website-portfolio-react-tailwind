@@ -36,9 +36,8 @@ export default function AboutMe(): React.ReactElement {
           linguagens e tecnologias pelo mesmo motivo. Aprendi{' '}
           <strong>C++, MySQL, SQLite e PHP</strong> motivado por um antigo jogo
           chamado Tibia. A paixão pelo desenvolvimento sempre me guiou. Ao me
-          interessar mais pelo assunto, descobri o que realmente significava ser
-          um desenvolvedor de software – e decidi que era isso que eu queria
-          ser. Aos 15 anos, desenvolvi jogos que acumularam mais de{' '}
+          interessar mais pelo assunto e decidi que era isso que eu queria ser.
+          Aos 15 anos, desenvolvi jogos que acumularam mais de{' '}
           <strong>200 mil visualizações</strong> no YouTube, uma confirmação de
           que eu estava no caminho certo. A aceitação e o entusiasmo das pessoas
           pelo meu trabalho me motivaram a continuar. Tudo fluiu de maneira
